@@ -1,7 +1,7 @@
 <template>
     <div class="offer-wrapper">
         <div class="background"></div>
-        <h2 class="offer-header" data-aos="zoom-out">Nasza oferta</h2>
+        <h2 data-aos="zoom-out">Nasza oferta</h2>
 
         <div class="services" >
             <div class="service-box" v-for="service in services" :key="service.iconHref" data-aos="fade-up">
@@ -42,15 +42,9 @@ export default {
         z-index: -1;
     }
 
-    .offer-header {
-        text-align: center;
-        font-size: 48px;
-        margin: 5%;
-    }
-
     .services {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-gap: 30px;
     }
 
@@ -67,11 +61,26 @@ export default {
         text-align: center;
         background-color: #fff;
         transition: background-color .5s ease-in-out;
+        position: relative;
+        overflow: hidden;
     }
 
-    .service-box:hover {
-        background-color: #282e2e;
-        color: white;
+    .service-box::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        opacity: 0;
+        width: 10%;
+        height: 10%;
+        border-radius: 50%;
+        background-color: #909090;
+        transform: translateX(-50%);
+        transition: all 0.2s ease;
+    }
+
+    .service-box:hover::before {
+transform: scaleY(200)
     }
 
     .service-header {
@@ -87,5 +96,6 @@ export default {
         height: 100px;
         background-position: center;
         background-repeat: no-repeat;
+        z-index: 2;
     }
 </style>

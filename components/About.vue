@@ -8,7 +8,7 @@
                 <transition name="slide-in">
                     <div class="content" v-show="notHidden">
                         <div @click="close" class="close"></div>
-                            <img :src="`${imageSource}`" alt="Motor na lawecie" class="about-image">
+                            <div :style="{ backgroundImage: `url('./${imageSource}')` }" alt="Motor na lawecie" class="about-image"></div>
                             <div class="company-description">
                                 <h3 class="company-description-header">Kilka słów o Laffe Trans</h3>
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, ullam. Tempora veritatis voluptates quod quidem, in eveniet. Exercitationem aliquid repudiandae, aperiam hic tenetur, obcaecati nam quidem nulla, ut veniam explicabo?
@@ -123,11 +123,31 @@ export default {
         margin: 5%;
         line-height: 50px;
         font-size: 25px;
+        background-size: cover;
     }
 
     .company-description-header {
         font-size: 30px;
         margin: 15px;
+    }
+
+    @media screen and (max-width: 520px) {
+        .content {
+            flex-direction: column;
+        }
+
+        .about-image,
+        .company-description {
+            width: 80%;
+            height: 40vh;
+            font-size: 18px;
+            line-height: initial;
+        }
+
+        .about-image {
+            background-size: cover;
+            background-position: 40%;
+        }
     }
 
 

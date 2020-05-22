@@ -17,6 +17,7 @@ export default {
   },
   loading: { color: '#fff' },
   css: [
+    './assets/main.css',
     'aos/dist/aos.css'
   ],
   plugins: [

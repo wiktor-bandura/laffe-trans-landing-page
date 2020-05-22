@@ -89,7 +89,7 @@ export default {
     }
 
     .filter {
-        background-color: #282e2e;
+        background-color: var(--main-background-color);
         z-index: -1;
     }
 
@@ -163,7 +163,7 @@ export default {
         transform: translateX(0);
     }
 
-            @media screen and (max-width: 520px) {
+        @media screen and (max-width: 520px) {
 
         ul {
             position: absolute;

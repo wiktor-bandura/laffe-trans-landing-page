@@ -5,8 +5,11 @@
     <About  :notHidden="isClicked" @isClosed="checkClose"/>
     <Contact />
 
-    <footer> &copy; 2020 Laffe Trans All rights reserved.
-            <a target="_blank" href="https://icons8.com/icons/set/tow-truck">Tow Truck</a>, <a target="_blank" href="https://icons8.com/icons/set/truck">Truck</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <footer>
+      <p>
+        &copy; 2020 Laffe Trans All rights reserved.
+        <a target="_blank" href="https://icons8.com/icons/set/tow-truck">Tow Truck</a>, <a target="_blank" href="https://icons8.com/icons/set/truck">Truck</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+      </p>
     </footer>
   </div>
 </template>
@@ -69,14 +72,24 @@ export default {
 </script>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
+
+    #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  footer {
+    background-color: var(--main-background-color);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  footer a {
+    color: #fff;
+    font-weight: bold;
+  }
+
 </style>
