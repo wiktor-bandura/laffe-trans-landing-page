@@ -4,7 +4,7 @@
         <div class="background" style="background-image: url('./8.jpg')"></div>
        <header>
            <div class="h-wrap">
-               <h1>Laffe Trans</h1>
+               <h1>Laffe-Trans</h1>
         </div>
             <div class="navbar">
                 <ul>
@@ -50,18 +50,18 @@ export default {
 
     @keyframes clipEntrence {
         0% {
-            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
         }
 
         50% {
-            -webkit-clip-path: polygon(70% 0, 100% 0%, 30% 100%, 0% 100%);
-            clip-path: polygon(70% 0, 100% 0%, 30% 100%, 0% 100%);
+            -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
         }
 
         100% {
-            -webkit-clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
-            clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
+            -webkit-clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
         }
     }
 
@@ -84,8 +84,10 @@ export default {
     .background {
         background-size: cover;
         animation: clipEntrence 1.5s ease-in-out;
-        -webkit-clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
-        clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
+        /* -webkit-clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);
+        clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%); */
+        -webkit-clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(47% 0, 100% 0, 100% 100%, 0% 100%);
     }
 
     .filter {
@@ -107,9 +109,10 @@ export default {
         transform: translate(-50%, -50%);
         text-align: center;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        border: 2px solid var(--main-background-color);
 
     }
-
+/*
     h1::before,
     h1::after {
         content: '';
@@ -121,15 +124,16 @@ export default {
     h1::before {
         border: 5px solid #fff;
         position: absolute;
+        z-index: -1;
     }
 
     h1::after {
-        border: 5px solid black;
+        border: 5px solid var(--main-background-color);
         position: absolute;
         top: 0;
         left: 40%;
         z-index: -1;
-    }
+    } */
 
     ul {
         list-style-type: none;
@@ -163,13 +167,37 @@ export default {
         transform: translateX(0);
     }
 
-        @media screen and (max-width: 520px) {
+@media screen and (max-width: 520px) {
 
-        ul {
-            position: absolute;
-            bottom: 20%;
-            width: 100vw;
-        }
+    .navbar {
+        width: 100vw;
+        height: 10%;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 2px solid #0962d7;
+        background-color: var(--main-background-color);
+        position: relative;
+    }
+
+
+    ul {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    ul > li {
+        display: flex;
+        font-size: 5vw;
+        width: 33%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul > li::before {
+        display: none;
+    }
+
 
 }
 

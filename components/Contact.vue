@@ -1,28 +1,18 @@
 <template>
     <div class="contact-wrapper">
         <h2 data-aos="zoom-out">Skontaktuj się z nami</h2>
+        <h3 data-aos="zoom-out">Znajdź nas na facebook'u, napisz maila lub po prostu zadzwoń. <br> Kliknij, w ikonę, aby się skontaktować. </h3>
 
-       <div data-aos="fade-up">
-            <div class="phone-wrap">
-            <p> <b> Nr telefonu: </b> </p>
-            <a :href="number">
-                {{ number }}
-            </a>
-            <a :href="number">
-                <div :style="{ backgroundImage: `url('./${phoneIcon}')` }"></div>
-            </a>
-        </div>
+        <hr>
+        <div class="contacts" data-aos="fade-right">
 
-        <div class="mail-wrap">
-            <p> <b> Adres e-mail: </b> </p>
-            <a :href="`mailto:${emailAdress}`">
-                 {{ emailAdress }}
+            <a class="contact" v-for="contact in contacts" :key="contact.icon" :href="`${contact.href}`" target="_blank">
+                <div :style="{ backgroundImage: `url(./${contact.icon})`}"></div>
+
             </a>
-            <a :href="`mailto:${emailAdress}`">
-                <div :style="{ backgroundImage: `url('./${emailIcon}')` }"></div>
-            </a>
+
         </div>
-       </div>
+    <hr>
     </div>
 </template>
 
@@ -31,10 +21,18 @@ export default {
     name: 'Contact',
     data() {
         return {
-            number: '+48732708138',
-            emailAdress: 'msi20@wp.pl',
-            phoneIcon: 'icons8-phone-80.png',
-            emailIcon: 'icons8-composing-mail-80.png'
+            contacts: [
+                {
+                    icon: 'icons8-facebook-80.png',
+                    href: 'https://www.facebook.com/Laffe-Trans-105774571090786'                },
+                {
+                    icon: 'icons8-composing-mail-80.png',
+                    href: 'mailto:msi20@wp.pl'                },
+                {
+                    icon: 'icons8-phone-80.png',
+                    href: 'tel:+48732708138'
+                }
+            ]
         }
     },
 }
@@ -47,59 +45,66 @@ export default {
         padding: 20px;
     }
 
-    .phone-wrap,
-    .mail-wrap {
+    .contacts {
+        width: 100%;
+        height: 300px;
         display: flex;
-        margin: 30px;
-    }
-
-    p, a {
-        display: block;
-        box-sizing: border-box;
-        height: 50px;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        border: 1px solid #fff;
-        padding: 15px;
+        justify-content: space-around;
     }
 
-    p {
-        letter-spacing: 1px;
+    .contact {
+        width: 200px;
+        height: 200px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
     }
 
-    a {
-        text-decoration: none;
-        color: white;
-        transition: all .2s ease;
-        letter-spacing: 3px;
-    }
-
-    a:hover {
-        background-color: #6d6969;
-    }
-
-    .phone-wrap div,
-    .mail-wrap div {
-        width: 30px;
-        height: 30px;
-        padding: 20px;
+    .contact div {
+        width: 100%;
+        height: 100%;
         background-position: center;
-        background-size: cover;
         background-repeat: no-repeat;
+        z-index: 3;
+        position: absolute;
     }
 
-    .phone-wrap > p,
-    .mail-wrap > p {
-        border-top-left-radius: 13px;
-        border-bottom-left-radius: 13px;
-        border-right: none;
+    .contact::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: var(--secondary-color);
+        transform: translateY(100%);
+        transition: transform 0.2s ease-in-out;
+        border-radius: 50%;
+        z-index: 2;
     }
 
-    a:last-child {
-        border-top-right-radius: 13px;
-        border-bottom-right-radius: 13px;
-        border-left: none;
+    .contact:hover {
+        border: 2px dashed #fff;
     }
 
+    .contact:hover::before {
+        transform: translateY(0);
+    }
+
+    h3 {
+        text-align: center;
+        margin: 25px 0;
+        font-size: 25px;
+    }
+
+    @media screen and (max-width: 520px) {
+        .contact {
+            width: 105px;
+            height: 105px;
+        }
+
+        .contact::before {
+            display: none;
+        }
+    }
 </style>

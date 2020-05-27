@@ -10,7 +10,9 @@ body {
 }
 
 :root {
-    --main-background-color: #282e2e;
+    --main-background-color:#4287f5;
+    --secondary-color: #0962d7;
+    /* #282e2e */
 }
 
 h2 {

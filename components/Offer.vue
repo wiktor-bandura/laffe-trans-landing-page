@@ -6,7 +6,7 @@
         <div class="services" >
             <div class="service-box" v-for="service in services" :key="service.iconHref" data-aos="fade-up">
                <h3 class="service-header"> {{ service.name }} </h3>
-               <hr>
+               <!-- <hr> -->
                 <div class="service-icon" :style="{ backgroundImage: `url('./${service.iconHref}')` }"></div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ export default {
     .background {
         width: 100%;
         height: 100%;
-        background-color: #282e2e;
+        background-color: var(--main-background-color);
         -webkit-clip-path: polygon(100% 40%, 0% 100%, 100% 100%);
         clip-path: polygon(100% 40%, 0% 100%, 100% 100%);
         position: absolute;
@@ -44,7 +44,7 @@ export default {
 
     .services {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
         grid-gap: 30px;
     }
 
@@ -53,7 +53,7 @@ export default {
         min-height: 350px;
         padding: 15px;
         box-sizing: border-box;
-        border: 1px solid #a0a0a0;
+        border: 2px solid var(--secondary-color);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -85,6 +85,8 @@ transform: scaleY(200)
 
     .service-header {
         height: 50px;
+        font-size: 22px;
+        color: #303030;
     }
 
     hr {

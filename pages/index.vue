@@ -7,7 +7,7 @@
 
     <footer>
       <p>
-        &copy; 2020 Laffe Trans All rights reserved.
+        &copy; {{ getCurrentYear() }} Laffe Trans All rights reserved.
         <a target="_blank" href="https://icons8.com/icons/set/tow-truck">Tow Truck</a>, <a target="_blank" href="https://icons8.com/icons/set/truck">Truck</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a>
       </p>
     </footer>
@@ -66,6 +66,10 @@ export default {
     },
     checkClose() {
       this.isClicked = !this.isClicked;
+    },
+    getCurrentYear() {
+      const now = new Date();
+      return now.getFullYear();
     }
   }
 }
