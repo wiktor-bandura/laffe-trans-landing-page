@@ -19,7 +19,7 @@
 
                                     <p key="2" class="page" v-else>Posiadamy ubezpieczenie na przewozony towar oraz licencję międzynarodową na jego przewóz. <br>
                                     Zapraszamy wszystkich do współpracy.
-                                    Przyjmiemy każde zlecenie i spełnimy wszytkie wasze oczekiwania. </p>
+                                    Przyjmiemy każde zlecenie i spełnimy wszystkie wasze oczekiwania. </p>
                                 </transition>
 
                                 <div class="pages-switch">

@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Homepage @clickedAbout="isClickedAbout"/>
-    <Offer :services="services"/>
     <About  :notHidden="isClicked" @isClosed="checkClose"/>
+
+    <Offer :services="services"/>
+    <Galery/>
     <Contact />
 
     <footer>
@@ -20,6 +22,7 @@ import Homepage from '@/components/Homepage'
 import About from '@/components/About'
 import Offer from '@/components/Offer'
 import Contact from '@/components/Contact'
+import Galery from '@/components/Galery'
 
 export default {
   name: 'App',
@@ -58,6 +61,7 @@ export default {
     Homepage,
     About,
     Offer,
+    Galery,
     Contact
   },
   methods: {

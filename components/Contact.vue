@@ -6,8 +6,8 @@
         <hr>
         <div class="contacts" data-aos="fade-right">
 
-            <a class="contact" v-for="contact in contacts" :key="contact.icon" :href="`${contact.href}`" target="_blank">
-                <div :style="{ backgroundImage: `url(./${contact.icon})`}"></div>
+            <a class="contact" v-for="{ icon, href } in contacts" :key="icon" :href="`${href}`" target="_blank">
+                <div :style="{ backgroundImage: `url('./${icon}')`}"></div>
 
             </a>
 
@@ -91,11 +91,6 @@ export default {
         transform: translateY(0);
     }
 
-    h3 {
-        text-align: center;
-        margin: 25px 0;
-        font-size: 25px;
-    }
 
     @media screen and (max-width: 520px) {
         .contact {

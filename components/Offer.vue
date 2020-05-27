@@ -4,10 +4,10 @@
         <h2 data-aos="zoom-out">Nasza oferta</h2>
 
         <div class="services" >
-            <div class="service-box" v-for="service in services" :key="service.iconHref" data-aos="fade-up">
-               <h3 class="service-header"> {{ service.name }} </h3>
+            <div class="service-box" v-for="{name, iconHref} in services" :key="iconHref" data-aos="fade-up">
+               <h3 class="service-header"> {{ name }} </h3>
                <!-- <hr> -->
-                <div class="service-icon" :style="{ backgroundImage: `url('./${service.iconHref}')` }"></div>
+                <div class="service-icon" :style="{ backgroundImage: `url('./${iconHref}')` }"></div>
                 </div>
             </div>
         </div>

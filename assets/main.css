@@ -20,3 +20,9 @@ h2 {
     font-size: 48px;
     padding: 5%;
 }
+
+h3 {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 25px;
+}
