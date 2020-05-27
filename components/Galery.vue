@@ -3,7 +3,7 @@
         <h2 data-aos="zoom-out">Galeria Zdjęć</h2>
 
         <div class="photos">
-            <div class="photo" v-for="photo in 11" :key="photo" :style="{ backgroundImage: `url('${photo}.jpg')` }" @click="zoom(photo)" data-aos="zoom-out"> {{ photo }} </div>
+            <div class="photo" v-for="photo in 11" :key="photo" :style="{ backgroundImage: `url('${photo}.jpg')` }" @click="zoom(photo)" data-aos="zoom-out"></div>
         </div>
 
        <transition name="slide-in">
