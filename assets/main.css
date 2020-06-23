@@ -5,14 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    overflow-x: hidden;
-}
+body { overflow-x: hidden; }
 
 :root {
     --main-background-color:#4287f5;
     --secondary-color: #0962d7;
-    /* #282e2e */
 }
 
 h2 {

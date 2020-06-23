@@ -9,7 +9,9 @@
             <div class="navbar">
                 <ul>
                     <li v-for="(link, index) in links" :key="index">
-                        <a v-if="link.name !== 'O nas'" @click="scroll(link.href)"> {{ link.name }} </a>
+                        <a v-if="link.name !== 'O nas'" @click="scroll(link.href)">
+                             {{ link.name }}
+                        </a>
                         <a v-else @click="clickAbout" > {{ link.name }} </a>
                     </li>
                 </ul>

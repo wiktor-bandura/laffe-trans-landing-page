@@ -2,7 +2,6 @@
   <div id="app">
     <Homepage @clickedAbout="isClickedAbout"/>
     <About  :notHidden="isClicked" @isClosed="checkClose"/>
-
     <Offer :services="services"/>
     <Galery/>
     <Contact />

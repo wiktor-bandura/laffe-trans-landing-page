@@ -105,7 +105,6 @@ export default {
         /* background-position: center; */
         /* background-position: fixed; */
         background-repeat: no-repeat;
-        border: 1px solid #333;
     }
 
 </style>

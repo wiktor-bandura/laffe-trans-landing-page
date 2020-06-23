@@ -1,16 +1,13 @@
 <template>
     <div class="contact-wrapper">
         <h2 data-aos="zoom-out">Skontaktuj się z nami</h2>
-        <h3 data-aos="zoom-out">Znajdź nas na facebook'u, napisz maila lub po prostu zadzwoń. <br> Kliknij, w ikonę, aby się skontaktować. </h3>
+        <h3 data-aos="zoom-out">Znajdź nas na facebook'u, napisz maila lub po prostu zadzwoń. <br> Kliknij w ikonę, aby się skontaktować. </h3>
 
         <hr>
         <div class="contacts" data-aos="fade-right">
-
             <a class="contact" v-for="{ icon, href } in contacts" :key="icon" :href="`${href}`" target="_blank">
                 <div :style="{ backgroundImage: `url('./${icon}')`}"></div>
-
             </a>
-
         </div>
     <hr>
     </div>
