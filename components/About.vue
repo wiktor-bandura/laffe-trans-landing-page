@@ -17,7 +17,7 @@
                                 <transition name="slide-out" mode="out-in">
                                      <p key="1" class="page" v-if="firstPage">Laffe-Trans firma zajmująca się głównie przewozem aut w Polsce i za granicą. Nasz cel to oferowanie usług na najwyższym poziomie. Działamy tak, aby klient był zawsze zadowolony. Jesteśmy rzetelną i punktualną firmą, ale i bezpieczeństwo jest dla nas bardzo ważne.</p>
 
-                                    <p key="2" class="page" v-else>Posiadamy ubezpieczenie na przewozony towar oraz licencję międzynarodową na jego przewóz. <br>
+                                    <p key="2" class="page" v-else>Posiadamy ubezpieczenie na przewożony towar oraz licencję międzynarodową na jego przewóz. <br>
                                     Zapraszamy wszystkich do współpracy.
                                     Przyjmiemy każde zlecenie i spełnimy wszystkie wasze oczekiwania. </p>
                                 </transition>
