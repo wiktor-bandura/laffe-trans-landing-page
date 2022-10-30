@@ -52,8 +52,7 @@ export default {
         box-sizing: border-box;
         min-height: 350px;
         padding: 15px;
-        box-sizing: border-box;
-        border: 2px solid var(--secondary-color);
+        border: 4px solid #000;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -63,24 +62,6 @@ export default {
         transition: background-color .5s ease-in-out;
         position: relative;
         overflow: hidden;
-    }
-
-    .service-box::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 50%;
-        opacity: 0;
-        width: 10%;
-        height: 10%;
-        border-radius: 50%;
-        background-color: #909090;
-        transform: translateX(-50%);
-        transition: all 0.2s ease;
-    }
-
-    .service-box:hover::before {
-transform: scaleY(200)
     }
 
     .service-header {

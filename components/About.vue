@@ -4,24 +4,23 @@
                 <transition name="slide-in">
                     <div class="previous" v-show="notHidden"></div>
                 </transition>
-
                 <transition name="slide-in">
                     <div class="content" v-show="notHidden">
                         <div @click="close" class="close"></div>
-                            <div :style="{ backgroundImage: `url('./${imageSource}')` }" alt="Motor na lawecie" class="about-image"></div>
+                            <div :style="{ backgroundImage: `url('./${imageSource}')` }" class="about-image"></div>
                             <div class="company-description">
                                 <h3 class="company-description-header">Kilka słów o Laffe Trans</h3>
-
                                 <hr>
-
                                 <transition name="slide-out" mode="out-in">
-                                     <p key="1" class="page" v-if="firstPage">Laffe-Trans firma zajmująca się głównie przewozem aut w Polsce i za granicą. Nasz cel to oferowanie usług na najwyższym poziomie. Działamy tak, aby klient był zawsze zadowolony. Jesteśmy rzetelną i punktualną firmą, ale i bezpieczeństwo jest dla nas bardzo ważne.</p>
-
-                                    <p key="2" class="page" v-else>Posiadamy ubezpieczenie na przewożony towar oraz licencję międzynarodową na jego przewóz. <br>
+                                     <p key="1" class="page" v-if="firstPage">
+                                       Laffe-Trans firma zajmująca się głównie przewozem aut w Polsce i za granicą. Nasz cel to oferowanie usług na najwyższym poziomie. Działamy tak, aby klient był zawsze zadowolony. Jesteśmy rzetelną i punktualną firmą, ale i bezpieczeństwo jest dla nas bardzo ważne.
+                                     </p>
+                                    <p key="2" class="page" v-else>
+                                      Posiadamy ubezpieczenie na przewożony towar oraz licencję międzynarodową na jego przewóz. <br>
                                     Zapraszamy wszystkich do współpracy.
-                                    Przyjmiemy każde zlecenie i spełnimy wszystkie wasze oczekiwania. </p>
+                                    Przyjmiemy każde zlecenie i spełnimy wszystkie wasze oczekiwania.
+                                    </p>
                                 </transition>
-
                                 <div class="pages-switch">
                                     <p @click="firstPage = true" :class="{ active: firstPage }"> 1 </p>
                                     <p @click="firstPage = false" :class="{ active: !firstPage }"> 2 </p>
@@ -170,7 +169,6 @@ export default {
     }
 
     .page {
-        height: 65%;
         padding: 5% 0;
     }
 
